@@ -12,7 +12,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   bool _isLoading = true;
-  PDFDocument document;
+  PDFDocument? document;
 
   @override
   void initState() {
@@ -83,7 +83,7 @@ class _MyAppState extends State<MyApp> {
         child: _isLoading
             ? Center(child: CircularProgressIndicator())
             : PDFViewer(
-                document: document,
+                document: document!,
                 zoomSteps: 1,
                 //uncomment below line to preload all pages
                 // lazyLoad: false,
